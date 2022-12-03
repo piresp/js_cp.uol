@@ -6,5 +6,16 @@ let person = {
     age
 }
 
+person.name = 'João';
+
+person['name'] = 'Maria';
+
 console.log(person);
-console.log(typeof person)
+console.log(person.name);
+console.log(typeof person);
+
+
+let selection = 'name';
+person[selection] = 'Marie';
+
+console.log(person.name);
