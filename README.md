@@ -1,17 +1,17 @@
 # js_cp.uol
 
-### Basics
+### 1 Basics
 
-- [Variables](#1)
-- [Constants](#2)
-- [Primitives](#3)
-- [Typeof](#4)
-- [Objects](#5)
-- [Array](#6)
+- [1.1 Variables](#1)
+- [1.2 Constants](#2)
+- [1.3 Primitives](#3)
+- [1.4 Typeof](#4)
+- [1.5 Objects](#5)
+- [1.6 Array](#6)
 
 <a name="1"></a>
 
-#### Variables
+#### 1.1 Variables
 
 Declaring a variable:  
 ```js
@@ -27,7 +27,7 @@ let name = 'Gabriel', lastname = 'pereira';
 
 <a name="2"></a>
 
-#### Constants
+#### 1.2 Constants
 
 Declaring a constant:  
 ```js
@@ -38,7 +38,7 @@ console.log(rate);
 
 <a name="3"></a>
 
-#### Primitives
+#### 1.3 Primitives
 
 ```js
 let name = 'Gabriel';
@@ -51,7 +51,7 @@ let selectColor = null;
 
 <a name="4"></a>
 
-#### Typeof
+#### 1.4 Typeof
 
 ```js
 let name = 'Gabriel';
@@ -66,7 +66,7 @@ console.log(typeof name);
 
 <a name="5"></a>
 
-#### Objects
+#### 1.5 Objects
 
 Declaring object:
 ```js
@@ -92,7 +92,7 @@ console.log(person.name);
 
 <a name="6"></a>
 
-#### Array
+#### 1.6 Array
 
 Declaring array:
 ```js
@@ -105,7 +105,7 @@ console.log(selectedColors.lenght);
 
 <a name="7"></a>
 
-#### Functions
+#### 1.7 Functions
 
 ```js
 function greet() {
