@@ -2,14 +2,20 @@
 
 ### 1 Basics
 
-- [1.1 Variables](#1)
-- [1.2 Constants](#2)
-- [1.3 Primitives](#3)
-- [1.4 Typeof](#4)
-- [1.5 Objects](#5)
-- [1.6 Array](#6)
+- [1.1 Variables](#1.1)
+- [1.2 Constants](#1.2)
+- [1.3 Primitives](#1.3)
+- [1.4 Typeof](#1.4)
+- [1.5 Objects](#1.5)
+- [1.6 Array](#1.6)
 
-<a name="1"></a>
+### 2 Operators
+
+- [1.1 Arithmetic](#2.1)
+
+### 1 Basics
+
+<a name="1.1"></a>
 
 #### 1.1 Variables
 
@@ -25,7 +31,7 @@ let name = 'Gabriel', lastname = 'pereira';
 ```
 
 
-<a name="2"></a>
+<a name="1.2"></a>
 
 #### 1.2 Constants
 
@@ -36,7 +42,7 @@ console.log(rate);
 ```
 
 
-<a name="3"></a>
+<a name="1.3"></a>
 
 #### 1.3 Primitives
 
@@ -49,7 +55,7 @@ let selectColor = null;
 ```
 
 
-<a name="4"></a>
+<a name="1.4"></a>
 
 #### 1.4 Typeof
 
@@ -64,7 +70,7 @@ console.log(typeof name);
 ```
 
 
-<a name="5"></a>
+<a name="1.5"></a>
 
 #### 1.5 Objects
 
@@ -90,7 +96,7 @@ console.log(person.name);
 ```
 
 
-<a name="6"></a>
+<a name="1.6"></a>
 
 #### 1.6 Array
 
@@ -103,7 +109,7 @@ console.log(selectedColors);
 console.log(selectedColors.lenght);
 ```
 
-<a name="7"></a>
+<a name="1.7"></a>
 
 #### 1.7 Functions
 
@@ -118,4 +124,93 @@ function dynGreet(name, lastName) {
 
 greet();
 dynGreet('Ronaldo', 'Nazario');
+```
+
+
+### 2 Operators
+
+<a name="2.1"></a>
+
+#### 2.1 Arithmetic
+
+```js
+let x = 10;
+let y = 3;
+
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);
+console.log(x ** y);
+
+console.log(x++);
+console.log(x--);
+```
+
+
+<a name="2.2"></a>
+
+#### 2.2 Assignment Operators
+
+```js
+let x = 10;
+
+x = x + 5;
+x += 5;
+
+x = x * 3;
+x *=3;
+```
+
+
+<a name="2.3"></a>
+
+#### 2.3 Comparison Operators
+
+```js
+let x = 1;
+
+console.log(x > 0);
+console.log(x >= 1);
+console.log(x < 1);
+console.log(x <= 1);
+
+console.log(x === 1);
+console.log(x !== 1);
+```
+
+
+<a name="2.4"></a>
+
+#### 2.4 Comparison Operators
+
+```js
+console.log(1 === 1);
+console.log('1' === 1);
+
+console.log(1 == 1);
+console.log('1' == '1');
+console.log(true == 1);
+```
+
+<a name="2.5"></a>
+
+#### 2.5 Ternary Operators
+
+```js
+let points = 90;
+let type = points > 100 ? 'gold' : 'silver';
+
+console.log(type);
+```
+
+
+<a name="2.6"></a>
+
+#### 2.6 Logical Operators
+
+```js
+|| // or
+&& // and
 ```
