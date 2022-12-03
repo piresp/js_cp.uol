@@ -11,7 +11,12 @@
 
 ### 2 Operators
 
-- [1.1 Arithmetic](#2.1)
+- [2.1 Arithmetic](#2.1)
+- [2.2 Assignment Operators](#2.2)
+- [2.3 Comparison Operators](#2.3)
+- [2.4 Ternary Operators](#2.4)
+- [2.5 Logical Operators](#2.5)
+
 
 ### 1 Basics
 
@@ -177,26 +182,18 @@ console.log(x < 1);
 console.log(x <= 1);
 
 console.log(x === 1);
-console.log(x !== 1);
-```
-
-
-<a name="2.4"></a>
-
-#### 2.4 Comparison Operators
-
-```js
-console.log(1 === 1);
 console.log('1' === 1);
+console.log(x !== 1);
 
 console.log(1 == 1);
 console.log('1' == '1');
 console.log(true == 1);
 ```
 
-<a name="2.5"></a>
 
-#### 2.5 Ternary Operators
+<a name="2.4"></a>
+
+#### 2.4 Ternary Operators
 
 ```js
 let points = 90;
@@ -206,9 +203,9 @@ console.log(type);
 ```
 
 
-<a name="2.6"></a>
+<a name="2.5"></a>
 
-#### 2.6 Logical Operators
+#### 2.5 Logical Operators
 
 ```js
 || // or
