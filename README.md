@@ -18,6 +18,12 @@
 - [2.5 Logical Operators](#2.5)
 
 
+### 3 Control Flow
+
+- [3.1 If Else](#3.1)
+- [3.2 Switch Case](#3.2)
+- [3.3 Loops](#3.3)
+
 ### 1 Basics
 
 <a name="1.1"></a>
@@ -210,4 +216,119 @@ console.log(type);
 ```js
 || // or
 && // and
+```
+
+
+### 3 Control Flow
+
+<a name="3.1"></a>
+
+#### 3.1 If Else
+
+```js
+let hour = 10;
+
+if (hour >= 6 && hour < 12)
+    console.log('Good Morning');
+else if (hour >= 12 && hour < 18)
+    console.log('Good Afternoon');
+else
+    console.log('Good Evening');
+```
+
+
+<a name="3.2"></a>
+
+#### 3.2 Switch Case
+
+```js
+let role = 'guest';
+
+switch (role) {
+    case 'guest':
+        console.log('Guest User');
+        break;
+    
+    case 'moderator':
+        console.log('Moderator User');
+        break;
+    
+    default:
+        console.log('Unknow User');
+}
+```
+
+
+<a name="3.3"></a>
+
+#### 3.3 Loops
+
+For
+```js
+for (let i = 1; i <= 5; i++) {
+    console.log('Hello World', i);
+}
+```
+
+While
+```js
+let i = 0;
+
+while (i <= 5) {
+    if (i % 2 !== 0) console.log(i);
+    i++;
+}
+```
+
+Do While
+```js
+let i = 0;
+do {
+    if (i % 2 !== 0) console.log(i);
+    i++;
+} while (i <= 5);
+```
+
+Infinite loops
+```js
+let i = 0;
+do {
+    if (i % 2 !== 0) console.log(i);
+    i++;
+} while (i <= 5);
+```
+
+For in
+```js
+const person = {
+    name: 'Gabriel',
+    age: 23
+};
+
+for (let key in person)
+    console.log(key, person[key]);
+```
+
+For of
+```js
+const colors = ['red'. 'green', 'blue'];
+
+for (let color of colors)
+    console.log(color);
+```
+
+Break and Continue
+```js
+let i = 0;
+
+while(i <= 10) {
+    if (i === 5) break;
+    if (i % 2 === 0) {
+        i++;
+        continue;
+    }
+
+    console.log(i);
+    i++;
+}
 ```
