@@ -24,6 +24,11 @@
 - [3.2 Switch Case](#3.2)
 - [3.3 Loops](#3.3)
 
+### 4 Objects
+
+- [4.1 Basics](#4.1)
+- [4.2 Factory Functions](#4.2)
+
 ### 1 Basics
 
 <a name="1.1"></a>
@@ -323,3 +328,134 @@ while(i <= 10) {
     i++;
 }
 ```
+
+
+### 4 Objects
+
+<a name="4.1"></a>
+
+#### 4.1 Basics
+```js
+const circle = {
+    radius: 1,
+    location: {
+        x: 1,
+        y: 1
+    },
+    isVisible: true,
+    draw: funcion() {
+        console.log('draw');
+    }
+};
+
+circle.draw();
+```
+
+<a name="4.2"></a>
+
+#### 4.2 Factory Functions
+
+```js
+function createCircle(radius) {
+    return {
+        radius,
+        draw() {
+            console.log('draw');
+        }
+    };
+}
+
+const circle1 = createCircle(1);
+console.log(circle1);
+
+const circle2 = createCircle(2);
+console.log(circle2);
+```
+
+#### 4.3 Constructor Functions
+
+Create an object whith a function.
+
+```js
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
+
+const circle = new Clicle(1);
+```
+
+#### 4.4 Dynamic Nature of Objects
+
+We can delete methods from objects with 'delete'
+```js
+const circle = {
+    radius: 1
+};
+
+circle.color = 'yellow';
+circle.draw = function() {}
+
+delete circle.color;
+delete circle.draw;
+
+console.log(circle);
+```
+
+#### 4.5 Value vs References
+
+**Primitives** are copied by their **value**  
+**Objects** are copied by their **reference**  
+
+**Value Types** [ Number, String, Boolean, Symbol, undefined, null ]  
+**Reference Types** [ Object, Function, Array ]
+
+#### 4.6 Enumerating Properties of an Object
+
+```js
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+for (let key in circle)
+    console.log(key, circle[key]);
+
+for (let key of Object.keys(circle))
+    console.log(key);
+
+for (let entry of Object.entries(circle))
+    console.log(entry);
+```
+
+#### 4.7 Cloning an Object
+
+Cloning Object  
+```js
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+const another = { ...circle };
+```
+
+Old way  
+```js
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+const another = Object.assign({}, circle);
+```
+
+
