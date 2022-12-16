@@ -49,6 +49,11 @@
 - [5.12 Iterating](#5.12)
 - [5.13 Testing](#5.13)
 
+### 6 Functions
+
+- [6.1 Declarations vs Expressions](#6.1)
+- [6.2 Arguments](#6.2)
+
 ### 1 Basics
 
 <a name="1.1"></a>
@@ -821,4 +826,109 @@ all positives
 ```js
 const allPositives = numbers.every(value => value >= 0)
 console.log(allPositives) // false
+```
+
+
+### Functions
+
+<a name="6.1"></a>
+
+#### 6.1 Declarations vs Expressions
+
+Function Declaration
+```js
+function walk() {
+    console.log('walk');
+}
+```
+
+Anonymous Function Expression
+```js
+let run = function () {
+    console.log('run')
+};
+
+let move = run;
+run();
+move();
+```
+
+Named Function Expression
+```js
+let run = function run() {
+    console.log('run')
+};
+```
+
+<a name="6.2"></a>
+
+#### 6.2 Arguments
+
+```js
+function sum() {
+    let total = 0;
+    for (let value of arguments)
+        total += value;
+    return total;
+}
+
+console.log (sum(1, 2, 3, 4, 5, 10)) // 25
+```
+
+<a name="6.3"></a>
+
+#### 6.3 Rest Operator (...args)
+
+The rest Operator grab all the entries and return a array of elements
+```js
+function sum(...args) {
+    return args.reduce((a, b) => a + b);
+}
+
+console.log (sum(1, 2, 3, 4, 5, 10)) // 25
+```
+
+Calculating discount of a cart shop
+```js
+function sum(discount, ...prices) {
+    const total = prices.reduce((a, b) => a + b);
+    return total * (1 - discount);
+}
+
+console.log (sum(0.1, 20, 30)) // 45
+```
+
+<a name="6.4"></a>
+
+#### 6.4 Default Parameters
+
+```js
+function interest(principal, rate = 3.5, years = 5) {
+    return principal * rate / 100 * years;
+}
+
+console.log (interest(10000)) // 1750
+```
+
+<a name="6.4"></a>
+
+#### 6.4 Getters and Setters
+
+```js
+const person = {
+    firstName: 'Gabriel',
+    lastName: 'Pires',
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`
+    },
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+person.fullName = 'John Smith';
+
+console.log(person);
 ```
